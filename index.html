@@ -20,25 +20,10 @@ padding: 0;
 width: 100%;
 height: 100%;
 }
-
-model-viewer {
-width: 100%;
-height: 90%;
-background-color: #ffffff;
-}
 </style>
 </head>
 <body>
-<script>
-(() => {
-const modelViewer = document.querySelector('#dimension-demo');
-
-self.setInterval(() => {
-modelViewer.animationName = modelViewer.animationName === 'Running' ? 'Idle' : 'Running';
-}, 1500.0);
-})();
-</script>
-<model-viewer id="dimension-demo" animation-name="Katla3Action" ar ar-modes="webxr" interaction-prompt="none" ar-scale="fixed" camera-orbit="0deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" src="klas12.glb" alt="A 3D model of an armchair.">
+<model-viewer id="dimension-demo" animation-name="Katla3Action" ar ar-modes="webxr" interaction-prompt="none" ar-scale="fixed" camera-orbit="177deg 80deg 140%" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" src="klas12.glb" alt="A 3D model of an armchair." camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom>
 <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
 <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
 <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -61,9 +46,8 @@ modelViewer.animationName = modelViewer.animationName === 'Running' ? 'Idle' : '
 <div id="controls" class="dim">
 <label for="src">Product:</label>
 <select id="src">
-<option value="klas12.glb">Chair</option>
-<option value="../../assets/ShopifyModels/Mixer.glb">Mixer</option>
-<option value="../../assets/ShopifyModels/GeoPlanter.glb">Cactus</option></select
+<option value="klas12.glb">1111</option>
+<option value="kladdds12.glb">2222</option></select
 ><br />
 
 <label for="show-dimensions">Show Dimensions:</label>
@@ -196,6 +180,19 @@ renderSVG();
 });
 </script>
 <style>
+model-viewer {
+margin: auto;
+width: 92vw;
+height: 98vmin;
+background-color: #44884444;
+border: 2vmin solid #ff882244;
+}
+body {
+background: radial-gradient(#00000022 0%, #000000 100%);
+}
+modell-viewer {
+background: transparent;
+}
 #controls {
 position: absolute;
 bottom: 16px;
@@ -260,10 +257,10 @@ display: none;
 </style>
 
 <!-- <model-viewer> HTML element -->
-<model-viewer src="klas12.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="legacy" exposure="2" shadow-softness="1" camera-orbit="180deg 85deg 282m" field-of-view="6deg" camera-target="0m 0m 0m"> </model-viewer>
+<model-viewer src="klas12.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom poster="poster.webp" shadow-intensity="2" touch-action="pan-y" environment-image="legacy" exposure="2" shadow-softness="1" camera-orbit="180deg 85deg 282m" field-of-view="6deg" camera-target="0m 0m 0m" disable-zoom> </model-viewer>
 <!-- Loads <model-viewer> for browsers: -->
 
-<model-viewer id="hotspot-camera-view-demo" src="klas12.glb" alt="Thor and the Midgard Serpent" camera-controls interaction-prompt="none" disable-zoom touch-action="none" camera-orbit="180deg 65deg 282m" camera-target="0m 0m 0m" field-of-view="95deg" min-field-of-view="25deg" max-field-of-view="65deg" interpolation-decay="200" min-camera-orbit="auto auto 15%" shadow-intensity="2" environment-image="legacy" exposure="1.2" shadow-softness=".8" ar>
+<model-viewer id="hotspot-camera-view-demo" src="klas12.glb" alt="Thor and the Midgard Serpent" camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom camera-orbit="180deg 65deg 282m" camera-target="0m 0m 0m" field-of-view="95deg" min-field-of-view="25deg" max-field-of-view="65deg" interpolation-decay="200" min-camera-orbit="auto auto 15%" shadow-intensity="2" environment-image="legacy" exposure="1.2" shadow-softness=".8" ar>
 <!-- 
 ##
 ##
@@ -328,7 +325,7 @@ transform: translate3d(-50%, -50%, 0); */
 }
 </style>
 <!-- <model-viewer> HTML element -->
-<model-viewer src="klas12.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="legacy" exposure="2" shadow-softness="1" camera-orbit="180deg 85deg 282m" field-of-view="6deg" camera-target="0m 0m 0m"> </model-viewer>
+<model-viewer src="klas12.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom poster="poster.webp" touch-action="pan-y" shadow-intensity="2" environment-image="legacy" exposure="2" shadow-softness="1" camera-orbit="180deg 85deg 282m" field-of-view="6deg" camera-target="0m 0m 0m"> </model-viewer>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 </body>
 </html>
