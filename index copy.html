@@ -10,8 +10,9 @@
 body {
 overflow-x: hidden;
 overflow-y: overlay;
-background: linear-gradient(to bottom, #66666688 8%, #576c7022 68%, #bbbbbb22 100%, #66666622 100%);
+background: linear-gradient(to bottom, #66666688 8%,#576c7022 68%,#bbbbbb22 100%,#66666622 100%);
 font-family: monospace;
+
 }
 model-viewer {
 margin: 2em auto;
@@ -20,6 +21,8 @@ height: 68vh;
 background-color: #22222222;
 border: 2vmw solid #22222222;
 }
+
+
 
 /* LINES-MODEL */
 #controls {
@@ -36,7 +39,7 @@ z-index: 10;
 display: ;
 width: 0;
 height: 0;
-padding: 0.4em;
+padding: .4em;
 border-radius: 50%;
 border: 1px solid #ffffff22;
 background: #ffffff66;
@@ -86,30 +89,29 @@ display: none;
 .modelgui2 {
 position: absolute;
 bottom: 0;
-background: ;
-margin: 2%;
-width: 96%;
+background: red;
+width: 100%;
 display: flex;
 justify-content: space-between;
 }
 
-.modelgui2 button {
+.modelgui2 button{
 position: ;
 bottom: 0;
 background: #ffffff;
 border: 1px solid #000000;
-padding: 0.6em;
+padding: .6em;
 display: flex;
 justify-content: space-between;
 }
-.modelgui2 button:hover {
-background: #aaaaaa;
-}
+
+
 </style>
 </head>
 <body>
 <!-- LINES-MODEL -->
 <model-viewer id="dimension-demo" animation-name="Katla3Action" ar ar-modes="webxr" interaction-prompt="none" ar-scale="fixed" camera-orbit="177deg 80deg 140%" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" src="klas12.glb" alt="A 3D model of an armchair." camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom>
+
 <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
 <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
 <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -268,9 +270,11 @@ renderSVG();
 
 <!-- ANNOTES-CAMERA-MODEL -->
 <model-viewer id="hotspot-camera-view-demo" src="klas12.glb" alt="Thor and the Midgard Serpent" camera-controls interaction-prompt="none" touch-action="pan-y" disable-zoom camera-orbit="180deg 65deg 282m" camera-target="0m 0m 0m" field-of-view="95deg" min-field-of-view="25deg" max-field-of-view="65deg" interpolation-decay="200" min-camera-orbit="auto auto 15%" shadow-intensity="2" environment-image="legacy" exposure="1.2" shadow-softness=".8" ar>
+
+
 <div class="modelgui2">
-<button class="view-button" data-target="1m 11m 1m">1111</button>
-<button class="view-button" slot="hotspot-0" data-position="-0.0569m 0.0969m -0.1398m" data-normal="-0.5829775m 0.2863482m -0.7603565m" data-orbit="-50.94862deg 84.56856deg 0.06545582m" data-target="-0.04384604m 0.07348397m -0.1213202m">2222</button>
+<button class="view-button"  data-target="1m 11m 1m">1111</button>
+<button class="view-button" slot="hotspot-0" data-position="-0.0569m 0.0969m -0.1398m" data-normal="-0.5829775m 0.2863482m -0.7603565m" data-orbit="-50.94862deg 84.56856deg 0.06545582m" data-target="-0.04384604m 0.07348397m -0.1213202m">2222</button> 
 <button class="view-button" data-position="11m 1m 1m" data-target="1m 10m -0m">3333</button>
 <button class="view-button" slot="hotspot-1" data-position="-0.1997m 0.11766m 0.0056m" data-normal="-0.4421014m 0.04410423m 0.8958802m" data-orbit="3.711166deg 92.3035deg 0.04335197m" data-target="-0.1879433m 0.1157161m -0.01563221m">4444</button>
 <button class="view-button" slot="hotspot-2" data-position="0.0608m 0.0566m 0.0605m" data-normal="0.2040984m 0.7985359m -0.56629m" data-orbit="42.72974deg 84.74043deg 0.07104211m" data-target="0.0757959m 0.04128428m 0.07109568m">5555</button>
@@ -295,7 +299,7 @@ background: #fff;
 </style>
 <!-- ANNOTES-CAMERA-MODEL-END -->
 
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-</model-viewer>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script></div
+></model-viewer>
 </body>
 </html>
